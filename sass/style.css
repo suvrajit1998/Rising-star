@@ -1,0 +1,207 @@
+@import url("https://fonts.googleapis.com/css?family=Lobster&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background: #345;
+  color: #fff;
+}
+
+.main_header {
+  width: 100%;
+  height: 100vh;
+  background: url(../../image/successpng.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.logo {
+  position: absolute;
+  top: 5rem;
+  left: 5rem;
+  font-size: 4rem;
+  font-family: "Lobster", cursive;
+  text-shadow: 2rem 2rem 4rem #55d2f1;
+  background: -webkit-gradient(linear, left top, left bottom, from(#55d2f1), to(#fff));
+  background: linear-gradient(#55d2f1, #fff);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.header-text-box {
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  width: 90%;
+  height: 50vh;
+  background: url(../../image/logo.png);
+  background-repeat: no-repeat;
+}
+
+.heading-main {
+  position: absolute;
+  right: 2%;
+  top: 15rem;
+  font-size: 3.3rem;
+  font-weight: 800;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ec0ee1), to(#8715f1));
+  background: linear-gradient(#ec0ee1, #8715f1);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.navigation-button {
+  position: fixed;
+  top: 5rem;
+  right: 5rem;
+  width: 7rem;
+  height: 7rem;
+  border-radius: 50%;
+  background: #fff;
+  cursor: pointer;
+  z-index: 2000;
+  text-align: center;
+}
+
+.navigation-background {
+  position: fixed;
+  top: 5.5rem;
+  right: 5.5rem;
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  z-index: 1000;
+  background: radial-gradient(#55d2f1, #ffffff);
+  -webkit-transition: -webkit-transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+  transition: -webkit-transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+  transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+  transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1), -webkit-transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.navigation-checkbox {
+  display: none;
+}
+
+.navigation-nav {
+  position: fixed;
+  width: 0;
+  height: 100vh;
+  top: 0;
+  right: 0;
+  opacity: 0;
+  z-index: 1500;
+  -webkit-transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.navigation-list {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+  list-style: none;
+}
+
+.navigation-item {
+  margin: 1rem;
+}
+
+.navigation-link:link, .navigation-link:visited {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 3rem;
+  color: #fff;
+  display: inline-block;
+  padding: 1rem 2rem;
+  font-weight: 300;
+  background: linear-gradient(120deg, transparent 0%, transparent 50%, #fff 50%);
+  background-size: 220%;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.navigation-link:link span, .navigation-link:visited span {
+  margin-right: 1.5rem;
+  display: inline-block;
+}
+
+.navigation-link:hover, .navigation-link:active {
+  background-position: 100%;
+  -webkit-transform: translateX(1rem);
+          transform: translateX(1rem);
+  color: #55d2f1;
+}
+
+.navigation-checkbox:checked ~ .navigation-background {
+  -webkit-transform: scale(80);
+          transform: scale(80);
+}
+
+.navigation-checkbox:checked ~ .navigation-nav {
+  width: 100%;
+  opacity: 1;
+}
+
+.navigation-icon {
+  position: relative;
+  margin-top: 3.5rem;
+}
+
+.navigation-icon, .navigation-icon::after, .navigation-icon::before {
+  width: 3rem;
+  height: 2px;
+  background: #333;
+  display: inline-block;
+}
+
+.navigation-icon::after, .navigation-icon::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.navigation-icon::after {
+  top: 0.8rem;
+}
+
+.navigation-icon::before {
+  top: -0.8rem;
+}
+
+.navigation-button:hover .navigation-icon::after {
+  top: 1rem;
+}
+
+.navigation-button:hover .navigation-icon::before {
+  top: -1rem;
+}
+
+.navigation-checkbox:checked ~ .navigation-button .navigation-icon {
+  background: transparent;
+}
+
+.navigation-checkbox:checked ~ .navigation-button .navigation-icon::after {
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+  top: 0;
+}
+
+.navigation-checkbox:checked ~ .navigation-button .navigation-icon::before {
+  -webkit-transform: rotate(-135deg);
+          transform: rotate(-135deg);
+  top: 0;
+}
+/*# sourceMappingURL=style.css.map */
